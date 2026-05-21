@@ -1,4 +1,4 @@
-import { ProjectsReportsSection } from '@/sections/ProjectsReportsSection';
+import { ProjectsReportsSection } from './ProjectsReportsSection';
 
 export function ImpactReportsPage() {
   return <ProjectsReportsSection />;

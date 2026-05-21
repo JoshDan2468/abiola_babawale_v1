@@ -1,15 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowUp, BadgeCheck, Facebook, Instagram, Landmark, Linkedin, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const links = [
-  { label: 'About', to: '/about' },
-  { label: 'Programs', to: '/programs' },
-  { label: 'Impact Reports', to: '/impact-reports' },
-  { label: 'Gallery', to: '/gallery' },
-  { label: 'News', to: '/news' },
-  { label: 'Contact', to: '/contact' },
-];
+import { FOOTER_NAV_ROUTES } from '@/routes/paths';
 
 export function SiteFooter() {
   return (
@@ -48,7 +40,7 @@ export function SiteFooter() {
           <div>
             <h3 className='mb-3 font-bold'>Quick Links</h3>
             <ul className='space-y-2 text-sm text-slate-300'>
-              {links.map((item) => (
+              {FOOTER_NAV_ROUTES.map((item) => (
                 <li key={item.to}>
                   <Link to={item.to} className='hover:text-white transition-colors'>
                     {item.label}

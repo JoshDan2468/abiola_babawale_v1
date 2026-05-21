@@ -1,4 +1,4 @@
-import { NewsSection } from '@/sections/NewsSection';
+import { NewsSection } from './NewsSection';
 
 export function NewsPage() {
   return <NewsSection />;

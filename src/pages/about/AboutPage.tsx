@@ -1,4 +1,4 @@
-import { AboutSection } from '@/sections/AboutSection';
+import { AboutSection } from './AboutSection';
 
 export function AboutPage() {
   return <AboutSection />;

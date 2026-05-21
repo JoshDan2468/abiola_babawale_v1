@@ -1,4 +1,4 @@
-import { GallerySection } from '@/sections/GallerySection';
+import { GallerySection } from './GallerySection';
 
 export function GalleryPage() {
   return <GallerySection />;

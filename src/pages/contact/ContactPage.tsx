@@ -1,4 +1,4 @@
-import { ContactSection } from '@/sections/ContactSection';
+import { ContactSection } from './ContactSection';
 
 export function ContactPage() {
   return <ContactSection />;

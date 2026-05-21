@@ -1,4 +1,5 @@
-import { FormEvent, useMemo, useState } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, Copy, CreditCard, Landmark, LoaderCircle, ShieldCheck, Smartphone, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -27,10 +28,7 @@ export function DonateSection() {
   const [submitting, setSubmitting] = useState(false);
   const [notice, setNotice] = useState('');
 
-  const reference = useMemo(
-    () => `TABI-${new Date().getFullYear()}-${Math.random().toString(36).slice(2, 8).toUpperCase()}`,
-    [],
-  );
+  const [reference] = useState(() => `TABI-${new Date().getFullYear()}-${crypto.randomUUID().slice(0, 8).toUpperCase()}`);
 
   const parsedAmount = Number(amount);
   const isValid = name.trim().length > 2 && email.includes('@') && Number.isFinite(parsedAmount) && parsedAmount > 0;

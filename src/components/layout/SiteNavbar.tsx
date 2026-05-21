@@ -3,17 +3,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { Heart, Menu, X } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
-const links = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
-  { label: 'Programs', to: '/programs' },
-  { label: 'Impact Reports', to: '/impact-reports' },
-  { label: 'Get Involved', to: '/get-involved' },
-  { label: 'Gallery', to: '/gallery' },
-  { label: 'News', to: '/news' },
-  { label: 'Contact', to: '/contact' },
-];
+import { MAIN_NAV_ROUTES, ROUTES } from '@/routes/paths';
 
 const baseItem =
   'px-3 py-2 rounded-full text-sm font-semibold transition-all duration-200';
@@ -25,7 +15,7 @@ export function SiteNavbar() {
     <header className='sticky top-0 z-50 border-b border-slate-200/70 bg-white/95 backdrop-blur-md'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex h-20 items-center justify-between gap-3'>
-          <Link to='/' className='flex items-center gap-3' aria-label='Go to home page'>
+          <Link to={ROUTES.home} className='flex items-center gap-3' aria-label='Go to home page'>
             <img
               src='/icons/icon_ngo.png'
               alt='Titus and Abiola Babawale Initiative logo'
@@ -42,7 +32,7 @@ export function SiteNavbar() {
           </Link>
 
           <nav className='hidden xl:flex items-center gap-2' aria-label='Main Navigation'>
-            {links.map((item) => (
+            {MAIN_NAV_ROUTES.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
@@ -54,7 +44,7 @@ export function SiteNavbar() {
               </NavLink>
             ))}
             <Button asChild className='rounded-full bg-[#2c5c39] hover:bg-[#234a2e] ml-2'>
-              <Link to='/donate'>
+              <Link to={ROUTES.donate}>
                 Donate
                 <Heart className='ml-2 h-4 w-4' fill='currentColor' />
               </Link>
@@ -82,7 +72,7 @@ export function SiteNavbar() {
             className='xl:hidden border-t border-slate-200 bg-white'
           >
             <div className='mx-auto max-w-7xl px-4 py-3 grid gap-1'>
-              {links.map((item) => (
+              {MAIN_NAV_ROUTES.map((item) => (
                 <NavLink
                   key={item.to}
                   to={item.to}
@@ -97,7 +87,7 @@ export function SiteNavbar() {
                 </NavLink>
               ))}
               <Button asChild className='mt-2 bg-[#2c5c39] hover:bg-[#234a2e]'>
-                <Link to='/donate' onClick={() => setIsOpen(false)}>
+                <Link to={ROUTES.donate} onClick={() => setIsOpen(false)}>
                   Donate Now
                 </Link>
               </Button>

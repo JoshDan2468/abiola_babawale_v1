@@ -1,4 +1,4 @@
-import { ProgramsSection } from '@/sections/ProgramsSection';
+import { ProgramsSection } from './ProgramsSection';
 
 export function ProgramsPage() {
   return <ProgramsSection />;
