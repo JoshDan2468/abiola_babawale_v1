@@ -3,6 +3,7 @@ import { Calendar, Clock, MapPin, Megaphone } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { publicAsset } from '@/lib/assets';
 
 const newsItems = [
   {
@@ -59,7 +60,7 @@ export function NewsSection() {
               transition={{ duration: 0.5, delay: index * 0.08 }}
             >
               <Card className='overflow-hidden h-full border-slate-200 hover:shadow-xl transition-shadow'>
-                <img src={item.image} alt={item.title} className='h-52 w-full object-cover' loading='lazy' />
+                <img src={publicAsset(item.image)} alt={item.title} className='h-52 w-full object-cover' loading='lazy' />
                 <div className='p-5'>
                   <Badge className='bg-blue-700 text-white'>{item.category}</Badge>
                   <h3 className='text-xl font-bold text-slate-900 mt-3 mb-2'>{item.title}</h3>

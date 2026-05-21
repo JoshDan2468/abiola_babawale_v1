@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowDownToLine, BadgeCheck, FileText, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { publicAsset } from '@/lib/assets';
 
 const reports = [
   {
@@ -90,7 +91,7 @@ export function ProjectsReportsSection() {
             <div className='space-y-4'>
               {projectHighlights.map((project) => (
                 <div key={project.title} className='rounded-xl overflow-hidden border border-slate-200 bg-white'>
-                  <img src={project.image} alt={project.title} className='h-36 w-full object-cover' loading='lazy' />
+                  <img src={publicAsset(project.image)} alt={project.title} className='h-36 w-full object-cover' loading='lazy' />
                   <div className='p-4'>
                     <h4 className='font-semibold text-slate-900'>{project.title}</h4>
                     <p className='text-sm text-slate-600 mt-1'>{project.outcome}</p>

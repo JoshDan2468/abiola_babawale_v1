@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { Heart, Menu, X } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { publicAsset } from '@/lib/assets';
 import { MAIN_NAV_ROUTES, ROUTES } from '@/routes/paths';
 
 const baseItem =
@@ -17,7 +18,7 @@ export function SiteNavbar() {
         <div className='flex h-20 items-center justify-between gap-3'>
           <Link to={ROUTES.home} className='flex items-center gap-3' aria-label='Go to home page'>
             <img
-              src='/icons/icon_ngo.png'
+              src={publicAsset('/icons/icon_ngo.png')}
               alt='Titus and Abiola Babawale Initiative logo'
               className='h-11 w-11 object-contain'
             />

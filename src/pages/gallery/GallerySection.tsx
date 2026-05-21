@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ChevronLeft, ChevronRight, PlayCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { publicAsset } from '@/lib/assets';
 
 const galleryItems = [
   { url: '/images/services/p1.jpg', title: 'Education Outreach', description: 'Classroom support and school materials distribution.' },
@@ -41,7 +42,7 @@ export function GallerySection() {
 
           <motion.img
             key={galleryItems[currentIndex].url}
-            src={galleryItems[currentIndex].url}
+            src={publicAsset(galleryItems[currentIndex].url)}
             alt={galleryItems[currentIndex].title}
             loading='lazy'
             initial={{ opacity: 0.35, scale: 1.05 }}
@@ -82,7 +83,7 @@ export function GallerySection() {
               }`}
               aria-label={`Open gallery item ${item.title}`}
             >
-              <img src={item.url} alt={item.title} loading='lazy' className='h-20 w-full object-cover' />
+              <img src={publicAsset(item.url)} alt={item.title} loading='lazy' className='h-20 w-full object-cover' />
             </button>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { CheckCircle2, Eye, ShieldCheck, Target, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import { publicAsset } from '@/lib/assets';
 
 const values = [
   "Integrity and transparency in all decisions",
@@ -49,7 +50,7 @@ export function AboutSection() {
             className='rounded-2xl overflow-hidden shadow-2xl h-full min-h-[460px] relative'
           >
             <img
-              src='/images/services/p8.jpg'
+              src={publicAsset('/images/services/p8.jpg')}
               alt='Volunteers engaging with children in a community center'
               className='w-full h-full object-cover'
               loading='lazy'

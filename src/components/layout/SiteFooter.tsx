@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowUp, BadgeCheck, Facebook, Instagram, Landmark, Linkedin, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { publicAsset } from '@/lib/assets';
 import { FOOTER_NAV_ROUTES } from '@/routes/paths';
 
 export function SiteFooter() {
@@ -15,7 +16,7 @@ export function SiteFooter() {
         <div className='mb-12 grid gap-10 lg:grid-cols-4'>
           <div>
             <div className='mb-4 flex items-center gap-3'>
-              <img src='/icons/icon_ngo.png' alt='NGO logo' className='h-10 w-10' />
+              <img src={publicAsset('/icons/icon_ngo.png')} alt='NGO logo' className='h-10 w-10' />
               <div>
                 <p className='font-bold'>Titus and Abiola</p>
                 <p className='text-xs text-emerald-300'>Babawale Initiative</p>

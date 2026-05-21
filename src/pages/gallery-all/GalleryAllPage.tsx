@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { PlayCircle } from 'lucide-react';
+import { publicAsset } from '@/lib/assets';
 
 const media = [
   { type: 'image', src: '/images/services/p1.jpg', title: 'School Supplies Outreach' },
@@ -45,10 +46,10 @@ export function GalleryAllPage() {
             >
               <div className='relative h-64 overflow-hidden bg-slate-900'>
                 {item.type === 'video' ? (
-                  <video src={item.src} controls className='h-full w-full object-cover' />
+                  <video src={publicAsset(item.src)} controls className='h-full w-full object-cover' />
                 ) : (
                   <img
-                    src={item.src}
+                    src={publicAsset(item.src)}
                     alt={item.title}
                     loading='lazy'
                     className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-105'
