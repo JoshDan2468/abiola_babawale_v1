@@ -123,15 +123,39 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    box-sizing: border-box;
   }
 
   body {
     @apply bg-background text-foreground;
+    min-width: 320px;
+    overflow-x: hidden;
   }
 
   html {
     scroll-behavior: smooth;
     font-size: var(--font-size);
+  }
+
+  #root {
+    min-height: 100%;
+    width: 100%;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
   }
 
   /**

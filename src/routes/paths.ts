@@ -5,7 +5,6 @@ export const ROUTES = {
   impactReports: '/impact-reports',
   getInvolved: '/get-involved',
   volunteer: '/volunteer',
-  donate: '/donate',
   news: '/news',
   gallery: '/gallery',
   galleryAll: '/gallery/all',

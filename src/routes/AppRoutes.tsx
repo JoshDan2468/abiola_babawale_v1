@@ -2,7 +2,6 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { SiteLayout } from '@/components/layout/SiteLayout';
 import { AboutPage } from '@/pages/about/AboutPage';
 import { ContactPage } from '@/pages/contact/ContactPage';
-import { DonatePage } from '@/pages/donate/DonatePage';
 import { GalleryAllPage } from '@/pages/gallery-all/GalleryAllPage';
 import { GalleryPage } from '@/pages/gallery/GalleryPage';
 import { GetInvolvedPage } from '@/pages/get-involved/GetInvolvedPage';
@@ -23,7 +22,6 @@ export function AppRoutes() {
         <Route path={ROUTES.impactReports} element={<ImpactReportsPage />} />
         <Route path={ROUTES.getInvolved} element={<GetInvolvedPage />} />
         <Route path={ROUTES.volunteer} element={<VolunteerPage />} />
-        <Route path={ROUTES.donate} element={<DonatePage />} />
         <Route path={ROUTES.news} element={<NewsPage />} />
         <Route path={ROUTES.gallery} element={<GalleryPage />} />
         <Route path={ROUTES.galleryAll} element={<GalleryAllPage />} />

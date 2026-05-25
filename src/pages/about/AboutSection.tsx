@@ -21,7 +21,7 @@ export function AboutSection() {
   return (
     <section
       id='about'
-      className='py-20 bg-gradient-to-b from-[#f7fafc] to-[#e9f1ee]'
+      className='py-20 bg-linear-to-b from-[#f7fafc] to-[#e9f1ee]'
     >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <motion.div
@@ -47,7 +47,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className='rounded-2xl overflow-hidden shadow-2xl h-full min-h-[460px] relative'
+            className='rounded-2xl overflow-hidden shadow-2xl h-full min-h-115 relative'
           >
             <img
               src={publicAsset('/images/services/p8.jpg')}
